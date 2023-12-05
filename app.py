@@ -1,9 +1,9 @@
-import principal
+import pessoa   
 from flask import Flask
 
-app = Flask(_name_)
+app = Flask(__name__)
 
-'''
+
 # url statica
 
 @app.route("/")
@@ -12,28 +12,29 @@ def Index():
 
 @app.route("/portadosfundos")
 def portadosfundos():
-    return "ERROU BOY, SITE ERRADO"
-'''
+    return "asdasdasd BOY, SITE ERRADO"
+
 # url dinamica
 
-@app.route("/adicionar/<nome>/<idade>/<email>")
-def adicionar(nome, idade, emai):
-    pessoa_teste = pessoa.Pessoa (nome)
+@app.route("/incluir/<nome>/<idade>/<email>")
+def incluir(nome, idade, email):
+    pessoa_teste = pessoa.Pessoa(nome)
     pessoa_teste.idade = int(idade)
     pessoa_teste.email = email
-    pessoa_teste.incluir;
-    return f'a pessoa {nome} foi adicionada com o {email}'.format(adicionar)
+    pessoa_teste.incluir()
+    return 'a pessoa foi incluida'
 
-@app.route("/excluir/<email>")
-def excluir(email):
-    pessoa_teste.email = email
-    pessoa_teste.excluir;
-    return 'a pessoa foi excluida {}'.format(excluir)
+@app.route("/Excluir/<email>")
+def Excluir(email):
+    pessoa_teste = pessoa.email = email
+    pessoa_teste.excluir()
+    return 'a pessoa foi excluida {}'.format(Excluir)
 
-@app.route("/listar/<todos>")
-def listar(todos):
-    return 'a pessoa foi adicionada {}'.format(listar)
+@app.route("/Listar")
+def Listar():
+    pessoa_teste = pessoa.Pessoa('')
+    return pessoa_teste.Listar()
 
 
-if _name_ == '_main_': 
+if __name__ == '__main__': 
     app.run()
