@@ -22,13 +22,13 @@ def Incluir(nome, idade, email):
     pessoa_teste.idade = int(idade)
     pessoa_teste.email = email
     pessoa_teste.Incluir()
-    return 'a pessoa foi incluida'
+    return f'a pessoa cujo email {email} foi incluida'
 
 @app.route("/Excluir/<email>")
 def Excluir(email):
     pessoa_teste = pessoa.email = email
-    pessoa_teste.excluir()
-    return 'a pessoa foi excluida {}'.format(Excluir)
+    pessoa_teste.Excluir()
+    return 'a pessoa foi excluida {}'
 
 @app.route("/Listar")
 def Listar():

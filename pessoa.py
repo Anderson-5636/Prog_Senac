@@ -15,11 +15,11 @@ class Pessoa:
     def Excluir(self):
         banco = sqlite3.connect('primeiro_banco.db')
         cursor = banco.cursor()
-        cursor.execute(f"delete from pessoa where nome = '{self.nome}'")
+        cursor.execute(f"delete from pessoa where email = '{self.email}'")
         banco.commit()
     
     def Listar(self):
         banco = sqlite3.connect('primeiro_banco.db')
         cursor = banco.cursor()
         cursor.execute(f"Select * from pessoa")
-        print(cursor.fetchall())
+        cursor.fetchall()
