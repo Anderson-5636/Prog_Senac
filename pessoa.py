@@ -1,6 +1,8 @@
 import sqlite3
 
 class Pessoa:
+    Connection = sqlite3.connect('primeiro_banco.db')
+    Cursor = Connection.cursor()
     def __init__(self, nome):
         self.nome = nome
         self.idade = 0
@@ -22,4 +24,5 @@ class Pessoa:
         banco = sqlite3.connect('primeiro_banco.db')
         cursor = banco.cursor()
         cursor.execute(f"Select * from pessoa")
-        print(cursor.fetchall())
+        return cursor.fetchall()
+  
