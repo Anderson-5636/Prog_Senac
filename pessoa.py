@@ -22,4 +22,4 @@ class Pessoa:
         banco = sqlite3.connect('primeiro_banco.db')
         cursor = banco.cursor()
         cursor.execute(f"Select * from pessoa")
-        cursor.fetchall()
+        print(cursor.fetchall())
