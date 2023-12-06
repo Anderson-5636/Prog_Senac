@@ -21,5 +21,5 @@ class Pessoa:
     def Listar(self):
         banco = sqlite3.connect('primeiro_banco.db')
         cursor = banco.cursor()
-        cursor.execute(f"Select * from nome")
+        cursor.execute(f"Select * from pessoa")
         print(cursor.fetchall())

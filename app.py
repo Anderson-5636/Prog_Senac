@@ -16,12 +16,12 @@ def portadosfundos():
 
 # url dinamica
 
-@app.route("/incluir/<nome>/<idade>/<email>")
-def incluir(nome, idade, email):
+@app.route("/Incluir/<nome>/<idade>/<email>")
+def Incluir(nome, idade, email):
     pessoa_teste = pessoa.Pessoa(nome)
     pessoa_teste.idade = int(idade)
     pessoa_teste.email = email
-    pessoa_teste.incluir()
+    pessoa_teste.Incluir()
     return 'a pessoa foi incluida'
 
 @app.route("/Excluir/<email>")
@@ -37,4 +37,4 @@ def Listar():
 
 
 if __name__ == '__main__': 
-    app.run()
+    app.run(host='0.0.0.0', port=80, debug=True)
