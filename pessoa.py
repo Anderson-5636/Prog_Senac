@@ -13,16 +13,22 @@ class Pessoa:
         cursor = banco.cursor()
         cursor.execute(f"insert into pessoa values('{self.nome}', '{self.idade}', '{self.email}')")
         banco.commit()
-    
-    def Excluir(self):
+
+    def Alterar(self, novo_nome):
         banco = sqlite3.connect('primeiro_banco.db')
         cursor = banco.cursor()
-        cursor.execute(f"delete from pessoa where email = '{self.email}'")
+        cursor.execute(f"update pessoa set nome = '{novo_nome}' where nome = '{novo_nome}' ")
+        banco.commit()
+    
+    def Excluir(self, nome):
+        banco = sqlite3.connect('primeiro_banco.db')
+        cursor = banco.cursor()
+        cursor.execute(f"delete from pessoa where nome = '{nome}'")
         banco.commit()
     
     def Listar(self):
         banco = sqlite3.connect('primeiro_banco.db')
         cursor = banco.cursor()
-        cursor.execute(f"Select * from pessoa")
+        cursor.execute(f"select * from pessoa")
         return cursor.fetchall()
   

@@ -3,7 +3,6 @@ from flask import Flask
 
 app = Flask(__name__)
 
-
 # url statica
 
 @app.route("/")
@@ -22,13 +21,21 @@ def Incluir(nome, idade, email):
     pessoa_teste.idade = int(idade)
     pessoa_teste.email = email
     pessoa_teste.Incluir()
-    return f'a pessoa cujo email {email} foi incluida'
+    return f'a pessoa cujo o nome {nome} e email {email} foi incluida'
 
-@app.route("/Excluir/<email>")
-def Excluir(email):
-    pessoa_teste = pessoa.email = email
-    pessoa_teste.Excluir()
-    return 'a pessoa foi excluida {}'
+@app.route("/Alterar/<nome>/<novo_nome>/<idade>/<email>")
+def Alterar(nome, novo_nome, idade, email):
+    pessoa_teste = pessoa.Pessoa(nome)
+    pessoa_teste.idade = int(idade)
+    pessoa_teste.email = email
+    pessoa_teste.Alterar(novo_nome)
+    return f'a pessoa cujo nome {novo_nome} foi alterado(a) com sucesso'
+
+@app.route("/Excluir/<nome>")
+def Excluir(nome): 
+    pessoa_teste = pessoa.Pessoa(nome)
+    pessoa_teste.Excluir(nome)
+    return f'a pessoa cujo {nome} foi excluida'
 
 @app.route("/Listar")
 def Listar():
