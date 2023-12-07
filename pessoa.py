@@ -20,6 +20,15 @@ class Pessoa:
         cursor.execute(f"update pessoa set nome = '{novo_nome}' where nome = '{novo_nome}' ")
         banco.commit()
     
+    '''
+    # Alterar feito pelo professor
+    def Alterar(self, novo_nome):
+        banco = sqlite3.connect('primeiro_banco.db')
+        cursor = banco.cursor()
+        cursor.execute(f"update pessoa set nome = '{novo_nome}', idate = '{self.idade}', email = '{self.email}' where nome = '{novo_nome}' ")
+        banco.commit()
+    '''
+    
     def Excluir(self, nome):
         banco = sqlite3.connect('primeiro_banco.db')
         cursor = banco.cursor()
