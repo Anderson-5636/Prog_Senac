@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Lista de tarefas</title>
+        <link rel = "stylesheet" href="style.css"/>
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <div>   
+            <h1 class="title">Tarefas do Dia</h1>
+            <UL id="list">
+            </UL> 
+        </div> 
+        <div class="entrada">
+               <input type="text"
+                      id="task_name" 
+                      placeholder="Digite um nome"/>
+               <button onclick="addNewTask()" class="add-task-button">Adicionar</button>
+        </div>
+    </body>
+</html> 

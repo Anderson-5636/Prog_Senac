@@ -1,0 +1,38 @@
+body{
+background: linear-gradient(to right,  rgb(2,90,94) 0%,rgb(2,75,78) 17%,rgb(1,58,61) 33%,rgb(0,32,34) 67%,rgb(0,21,22) 83%,rgb(0,8,8) 100%);
+    color: rgb(38, 116, 111);
+    justify-content: center;
+    font-family: monospace;
+}
+
+.title{
+    font-family: monospace;
+    font-size: 150px;
+    color: white;
+    margin-bottom: 24px; 
+}
+.list-item{
+    font-size: 50px;
+    color: white;
+    margin-bottom: 24px;
+    font-family: monospace;
+}
+
+input{
+    height: 24px;
+    background-color: transparent;
+    color: #111;
+    border-radius: 10px;
+    border-color:  rgb(9, 131, 66);
+    font-size: 16px;
+    padding: 8px;
+    font-family: monospace;
+}
+.add-task-button{
+    background-color:#008400;
+    border-radius: 10px;
+    height: 32px;
+    font-size: 16px;
+    padding: 8px;
+    color: white;
+}
