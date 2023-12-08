@@ -2,6 +2,7 @@ body{
 background: linear-gradient(to right,  rgb(2,90,94) 0%,rgb(2,75,78) 17%,rgb(1,58,61) 33%,rgb(0,32,34) 67%,rgb(0,21,22) 83%,rgb(0,8,8) 100%);
     color: rgb(38, 116, 111);
     justify-content: center;
+    align-items: center;
     font-family: monospace;
 }
 
