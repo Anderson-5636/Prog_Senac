@@ -8,3 +8,5 @@ function addNewTask(){
     listItem.appendChild(textElement);
     list.appendChild(listItem);
 }
+
+// usar o removeChild para remover a lista
