@@ -24,16 +24,17 @@ input{
     background-color: transparent;
     color: #111;
     border-radius: 10px;
-    border-color:  rgb(9, 131, 66);
+    border-color: #198754;
     font-size: 16px;
     padding: 8px;
     font-family: monospace;
 }
 .add-task-button{
-    background-color:#008400;
+    background-color:#198754;
     border-radius: 10px;
     height: 32px;
     font-size: 16px;
     padding: 8px;
     color: white;
+    box-shadow: #198754;
 }
