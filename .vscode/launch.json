@@ -15,6 +15,12 @@
             "request": "launch",
             "name": "Open starwrs.html",
             "file": "c:\\Users\\User\\Desktop\\Senac\\Turma_Senac_Prog_Anderson\\Flask\\Prog_Senac\\StarWars-Wiki\\starwars.html"
+        },
+        {
+            "type": "msedge",
+            "request": "launch",
+            "name": "Open formulario.html",
+            "file": "c:\\Users\\User\\Desktop\\Senac\\Turma_Senac_Prog_Anderson\\Flask\\Prog_Senac\\Formulario\\formulaio.html"
         }
     ]
 }
